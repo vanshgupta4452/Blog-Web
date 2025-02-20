@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <%- include("partials/head") %>
+</head>
+<body>
+  <%- include("partials/nav") %>  
+
+  <div class="mt-4 mx-4">
+    <form action="/user/addblog" method="post" enctype="multipart/form-data">
+      <div class="mb-3 mx-5">
+        <label for="title" class="form-label">Email address</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+      </div>
+      <div class="mb-3 mx-5">
+        <label for="body" class="form-label">Body</label>
+        <textarea class="form-control" id="body" name="body" rows="3" placeholder="Write Your content here"></textarea>
+      </div>
+      <div class="mb-3 mx-5">
+        <label for="imageurl" class="form-label">Add Photo</label>
+        <input class="form-control" type="file" id="imageurl" name="imageurl" accept="image/*">
+      </div>
+      <button type="submit" class="btn btn-primary mx-5">Upload</button>
+    </form>
+  </div>
+
+
+  <%- include("partials/script") %>
+</body>
+</html>
